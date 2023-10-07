@@ -1,0 +1,3 @@
+C:/MAMP/htdocs/CppCraft/cmake-build-debug/CMakeFiles/CppCraft.dir
+C:/MAMP/htdocs/CppCraft/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/MAMP/htdocs/CppCraft/cmake-build-debug/CMakeFiles/rebuild_cache.dir

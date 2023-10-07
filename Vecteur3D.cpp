@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <ctime>
 
+
 using namespace std;
 
 // Define a structure Vecteur3D that contains three real fields (x, y, and z).
