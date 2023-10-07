@@ -16,7 +16,7 @@ public:
     ComplexNumber(double realPart, double imaginaryPart) : real(realPart), imag(imaginaryPart) {}
 
     // Copy constructor
-    ComplexNumber(const ComplexNumber &c) : real(c.real), imag(c.imag) {}
+    ComplexNumber(const ComplexNumber &c) : real(c.real), imag(c.imag) {} // NOLINT(*-use-equals-default)
 
     // Destructor
     ~ComplexNumber() {}
@@ -88,13 +88,27 @@ void SortByInsertion(ComplexNumber *array, int size) {
         ComplexNumber key = array[i];
         int j = i - 1;
 
-        // Move elements of array[0..i-1] that are greater than key.module()
+        // Move elements of array[0.i-1] that are greater than key.module()
         // to one position ahead of their current position
         while (j >= 0 && array[j].Module() > key.Module()) {
             array[j + 1] = array[j];
             j = j - 1;
         }
         array[j + 1] = key;
+    }
+}
+
+// Function to perform bubble sort on an array of complex numbers based on module
+void BubbleSort(ComplexNumber *array, int size) {
+    for (int i = 0; i < size - 1; ++i) {
+        for (int j = 0; j < size - i - 1; ++j) {
+            if (array[j].Module() > array[j + 1].Module()) {
+                // Échange les éléments si ils sont dans le mauvais ordre
+                ComplexNumber temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
+            }
+        }
     }
 }
 
